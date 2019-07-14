@@ -11,12 +11,18 @@ $(document).ready(function() {
     event.preventDefault();
     $("#reciept").show();
 
-    var orderSize = []
-    $("input:checkbox[name=pizza-size]:checked").each(function(){
-      var pizzaSize = $(this).val()
-      orderSize.push(pizzaSize);
-      $("#order-size").text(orderSize);
-    });
+    var orderSize = pizzaSize
+    var pizzaSize = $("input:radio[name=pizza-size]:checked").val();
+    if (pizzaSize === "small") {
+      var orderSize = 6;
+    } else if (pizzaSize === "medium") {
+      var orderSize = 8;
+    } else if (pizzaSize === "large") {
+      var orderSize = 10;
+    }
+
+    $("#order-size").text(pizzaSize);
+
 
     var orderSauce = []
     $("input:checkbox[name=pizza-sauce]:checked").each(function(){
