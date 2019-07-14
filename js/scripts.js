@@ -13,11 +13,11 @@ $(document).ready(function() {
 
     var orderSize = pizzaSize
     var pizzaSize = $("input:radio[name=pizza-size]:checked").val();
-    if (pizzaSize === "small") {
+    if (pizzaSize === "Small") {
       var orderSize = 6;
-    } else if (pizzaSize === "medium") {
+    } else if (pizzaSize === "Medium") {
       var orderSize = 8;
-    } else if (pizzaSize === "large") {
+    } else if (pizzaSize === "Large") {
       var orderSize = 10;
     }
 
@@ -47,7 +47,7 @@ $(document).ready(function() {
       orderMeat.push(pizzaMeat);
       $("#order-meat").text(orderMeat);
     });
-    var priceMeat = (orderMeat.length * 2.5)
+    var priceMeat = (orderMeat.length * 2.50)
 
     var orderVeggies = []
     $("input:checkbox[name=veggies]:checked").each(function(){
@@ -55,7 +55,7 @@ $(document).ready(function() {
       orderVeggies.push(pizzaVeggies);
       $("#order-veggies").text(orderVeggies);
     });
-    var priceVeggies = (orderVeggies.length * 1.5)
+    var priceVeggies = (orderVeggies.length * 1.50)
 
     var totalPrice = orderSize + priceSauce + priceCheese + priceMeat + priceVeggies
     $("#order-total").text(totalPrice);
