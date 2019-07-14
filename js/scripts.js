@@ -11,29 +11,41 @@ $(document).ready(function() {
     event.preventDefault();
     $("#reciept").show();
 
-    $("input:checked[name=pizza-size]:checked").each(function(){
-      var orderSize = $(this).val();
-    });
-    $("input:checked[name=pizza-sauce]:checked").each(function(){
-      var orderSauce = $(this).val();
-    });
-    $("input:checked[name=cheese]:checked").each(function(){
-      var orderCheese = $(this).val();
-    });
-    $("input:checked[name=meat]:checked").each(function(){
-      var orderMeat = $(this).val();
-    });
-    $("input:checked[name=veggies]:checked").each(function(){
-      var orderVeggies = $(this).val();
+    var orderSize = []
+    $("input:checkbox[name=pizza-size]:checked").each(function(){
+      var pizzaSize = $(this).val()
+      orderSize.push(pizzaSize);
+      $("#order-size").text(orderSize);
     });
 
+    var orderSauce = []
+    $("input:checkbox[name=pizza-sauce]:checked").each(function(){
+      var pizzaSauce = $(this).val();
+      orderSauce.push(pizzaSauce);
+      $("#order-sauce").text(orderSauce);
+    });
 
+    var orderCheese = []
+    $("input:checkbox[name=cheese]:checked").each(function(){
+      var pizzaCheese = $(this).val();
+      orderCheese.push(pizzaCheese);
+      $("#order-cheese").text(orderCheese);
+    });
 
-    // $("#order-size"").append(orderSize + "<br>");
-    // $("#order-sauce").append(orderSauce + "<br>");
-    // $("#order-cheese").append(orderCheese + "<br>");
-    // $("#order-meat").append(orderMeat + "<br>");
-    // $("#order-veggies").append(orderVeggies + "<br>");
+    var orderMeat = []
+    $("input:checkbox[name=meat]:checked").each(function(){
+      var pizzaMeat = $(this).val();
+      orderMeat.push(pizzaMeat);
+      $("#order-meat").text(orderMeat);
+    });
+
+    var orderVeggies = []
+    $("input:checkbox[name=veggies]:checked").each(function(){
+      var pizzaVeggies = $(this).val();
+      orderVeggies.push(pizzaVeggies);
+      $("#order-veggies").text(orderVeggies);
+    });
+
 
     $("#pizza-options").hide();
 
