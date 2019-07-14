@@ -30,6 +30,7 @@ $(document).ready(function() {
       orderSauce.push(pizzaSauce);
       $("#order-sauce").text(orderSauce);
     });
+    var priceSauce = orderSauce.length;
 
     var orderCheese = []
     $("input:checkbox[name=cheese]:checked").each(function(){
@@ -37,6 +38,8 @@ $(document).ready(function() {
       orderCheese.push(pizzaCheese);
       $("#order-cheese").text(orderCheese);
     });
+    var priceCheese = orderCheese.length;
+
 
     var orderMeat = []
     $("input:checkbox[name=meat]:checked").each(function(){
@@ -44,6 +47,7 @@ $(document).ready(function() {
       orderMeat.push(pizzaMeat);
       $("#order-meat").text(orderMeat);
     });
+    var priceMeat = (orderMeat.length * 2.5)
 
     var orderVeggies = []
     $("input:checkbox[name=veggies]:checked").each(function(){
@@ -51,7 +55,10 @@ $(document).ready(function() {
       orderVeggies.push(pizzaVeggies);
       $("#order-veggies").text(orderVeggies);
     });
+    var priceVeggies = (orderVeggies.length * 1.5)
 
+    var totalPrice = orderSize + priceSauce + priceCheese + priceMeat + priceVeggies
+    $("#order-total").text(totalPrice);
 
     $("#pizza-options").hide();
 
