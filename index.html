@@ -12,15 +12,47 @@
   </head>
   <body>
     <div class="container">
-      <h1>Place your order here!</h1>
-       <h3>Size</h3>
-       <h3>Sauce</h3>
-       <h3>Cheese</h3>
-       <h3>Meat</h3>
-       <h3>Veggies</h3>
-       <button type="sumbit" class="btn btn-danger" id="submit-order">Order</button>
+      <form id="pizza-options">
+        <h1>Place your order here!</h1>
+         <h3>Size</h3>
+          <input type="checkbox" name="pizza-size" value="small">small<br>
+          <input type="checkbox" name="pizza-size" value="medium">medium<br>
+          <input type="checkbox" name="pizza-size" value="large">large<br>
+         <h3>Sauce</h3>
+          <input type="checkbox" name="pizza-sauce" value="marinara">marinara<br>
+          <input type="checkbox" name="pizza-sauce" value="white-sauce">white Sauce<br>
+          <input type="checkbox" name="pizza-sauce" value="bbq">bbq<br>
+          <input type="checkbox" name="pizza-sauce" value="olive-oil">olive oil and garlic<br>
+         <h3>Cheese</h3>
+          <input type="checkbox" name="cheese" value="mozzerella">mozzerella<br>
+          <input type="checkbox" name="cheese" value="provolone">provolone<br>
+          <input type="checkbox" name="cheese" value="cheddar">cheddar<br>
+          <input type="checkbox" name="cheese" value="parmesan">parmesan<br>
+          <input type="checkbox" name="cheese" value="gouda">gouda<br>
+         <h3>Meat</h3>
+          <input type="checkbox" name="meat" value="pepperoni">pepperoni<br>
+          <input type="checkbox" name="meat" value="sausage">sausage<br>
+          <input type="checkbox" name="meat" value="bacon">bacon<br>
+          <input type="checkbox" name="meat" value="chicken">chicken<br>
+         <h3>Veggies</h3>
+          <input type="checkbox" name="veggies" value="black-olives">black olives<br>
+          <input type="checkbox" name="veggies" value="onions">onions<br>
+          <input type="checkbox" name="veggies" value="mushrooms">mushrooms<br>
+          <input type="checkbox" name="veggies" value="green-peppers">green peppers<br>
+          <input type="checkbox" name="veggies" value="banana-peppers">banana peppers<br>
 
-      <h1>Reciept</h1>
+         <button type="sumbit" class="btn btn-danger" id="submit-order">Order</button>
+        </form>
+        
+      <div id="reciept">
+        <h1>Reciept</h1>
+          <h3>Size:</h3>
+          <h3>Sauce:</h3>
+          <h3>Cheese:</h3>
+          <h3>Meat:</h3>
+          <h3>Veggies:</h3>
+          <h3>Total:</h3>
+      </div>
     </div>
   </body>
 </html>
